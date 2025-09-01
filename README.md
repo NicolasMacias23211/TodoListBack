@@ -41,13 +41,14 @@ Antes de instalar el proyecto asegúrate de tener:
    ```
 
 4. **Configura la base de datos MySQL**  
-   Crea una base de datos en MySQL llamada `todolist`.  
+   Crea una base de datos en MySQL llamada `todolist_db`.  
+   CREATE DATABASE todolist_db CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
    Edita el archivo `settings.py` en la sección `DATABASES` para que coincida con tus credenciales:
    ```python
    DATABASES = {
        'default': {
            'ENGINE': 'django.db.backends.mysql',
-           'NAME': 'todolist',
+           'NAME': 'todolist_db',
            'USER': 'root',
            'PASSWORD': 'tu_password',
            'HOST': 'localhost',
